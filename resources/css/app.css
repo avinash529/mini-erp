@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+:root {
+    --mini-erp-bg: #f3f6fb;
+    --mini-erp-panel: #ffffff;
+    --mini-erp-panel-alt: #f8fafc;
+    --mini-erp-border: rgba(15, 23, 42, 0.08);
+    --mini-erp-primary: #2f6fed;
+    --mini-erp-primary-dark: #1f4bb4;
+    --mini-erp-text: #1f2937;
+    --mini-erp-muted: #6b7280;
+    --mini-erp-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+body {
+    background: linear-gradient(180deg, #f3f6fb 0%, #edf3ff 100%);
+    color: var(--mini-erp-text);
+    font-family: "Segoe UI", sans-serif;
+}
+
+.mini-erp-shell {
+    min-height: 100vh;
+}
+
+.mini-erp-navbar {
+    background: linear-gradient(90deg, #111827 0%, #1f2937 100%);
+    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-erp-card {
+    border: 1px solid var(--mini-erp-border);
+    border-radius: 1rem;
+    box-shadow: var(--mini-erp-shadow);
+    background: var(--mini-erp-panel);
+}
+
+.login-card {
+    border: 0;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
+}
+
+.login-card .card-header {
+    background: linear-gradient(90deg, #111827 0%, #1f2937 100%);
+    color: #ffffff;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 0;
+}
+
+.login-card .card-body {
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+.mini-erp-page {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.stat-card .card-body {
+    padding: 1.5rem;
+}
+
+.stat-card h2 {
+    margin: 0.45rem 0 0;
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    font-weight: 700;
+}
+
+.app-table {
+    margin-bottom: 0;
+}
+
+.app-table thead th {
+    background: var(--mini-erp-panel-alt);
+    color: #334155;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.app-table td,
+.app-table th {
+    vertical-align: middle;
+    padding: 0.9rem 1rem;
+}
+
+.nav-actions {
+    gap: 0.75rem;
+}
+
+@media (max-width: 767px) {
+    .nav-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.6rem;
+    }
+
+    .login-card .card-body {
+        padding: 1.25rem 1rem 1rem;
+    }
+}
